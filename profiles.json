@@ -1,0 +1,74 @@
+// **Profili dei membri del gruppo**   
+// Ogni profilo consiste di (1) avatar, (2) nome utente, (3) descrizione personale, (4) numero di "mi piace" che il profilo riceverà durante l'interazione
+	
+window.others = {
+  "posts" : [
+      {
+        "avatar": "avatars/others/george.png",
+        "username": "Georgeee",
+        "text": "Sono un ragazzo di 19 anni del Wisconsin (iniziate pure a prendervi gioco del mio accento). Amo la musica e ultimamente non ascolto altro che Joy Division, Echo & the bunnymen, e the smiths. Oltre alla musica mi piace imparare le lingue, la psicologia, disegnare e scrivere.",
+        "likes": [45000, 50000, 110000, 150000] //4
+      },
+      {
+        "avatar": "avatars/others/sarah.png",
+        "username": "Sarah",
+        "text": "Permettetemi di presentarmi. Sono Sarah, sposata e madre di due meravigliosi figli (ormai cresciuti). La mia carriera è stata un po' particolare. Iniziando come storica laureata, sono passata a una disciplina completamente diversa: consulente per l'orientamento professionale che cerca di aiutare i giovani con disabilità a trovare lavoro. Mi sono appena pensionata e ho iniziato a dedicare più tempo ai miei hobby, come cantare, leggere e giocare a pallavolo.",
+        "likes": [12000, 14000,15000,35000,80000,100000,110000,150000,20000] //9
+      },
+      {
+        "avatar": "avatars/others/john.png",
+        "username": "John",
+        "text": "Ciao, ho 57 anni, sposato, con due figli. Sono stato un programmatore negli Stati Uniti per circa 30 anni, ma non preoccupatevi: non ho il taglio di capelli polveroso, la camicia abbottonata oversize e gli occhiali da nerd con montatura grande. Non vedo l'ora di lavorare con tutti voi. Saluti, John",
+		"likes": [20000, 21000] //2
+      },
+      {
+        "avatar": "avatars/others/anca.png",
+        "username": "AncaD",
+        "text": "Sono una studentessa di Informatica, interessata al Natural Language Processing. Anche una amante del tè sfuso e un'entusiasta del Web Semantico. Sono curiosa di sapere di cosa si tratta questo compito.",
+        "likes": [10000, 12000, 40000, 80000, 120000] //5
+      },
+      {
+        "avatar": "avatars/others/niki.png",
+        "username": "Nick",
+        "text": "La mia vita ruota attorno all'arrampicata. Ho iniziato quando avevo 12 anni (compirò 18 presto) e di solito arrampico 4-5 ore al giorno. L'arrampicata non mi annoia mai, perché ogni volta è diversa: le vie, il tempo, la mia forza e resistenza. È fantastico!",
+        "likes": [40000, 450000, 90000, 100000, 150000, 155000] //6
+      },
+    {
+        "avatar": "avatars/others/mary.png",
+        "username": "Mary",
+        "text": "Il mio nome è Mary e ho 49 anni. Ho un marito e 2 figli cresciuti. La mia famiglia e io abbiamo vissuto in diversi paesi. I nostri figli hanno frequentato scuole internazionali ovunque siamo andati e da quando ci siamo trasferiti in Cina, ho trovato lavoro in quelle scuole. Oltre a girare per il mondo, mi piace giocare. Giochi da tavolo, carte, black jack o poker, mah jong, o giochi stupidi su Facebook, puzzle, praticamente qualsiasi cosa",
+        "likes": [20000, 25000, 95000] //3
+      },
+      {
+        "avatar": "avatars/others/lauren.png",
+        "username": "Lauren",
+        "text": "Sono Lauren, mi piace uscire con gli amici e andare a fare shopping. Sto solo facendo alcuni studi online qui!",
+        "likes": [12000, 38000] //1
+      },
+          {
+        "avatar": "avatars/others/kim.png",
+        "username": "Ky",
+        "text": "Ehi ragazzi. Ho 19 anni, coreano nativo. Sono in America da circa quattro anni ora. Mi considero abbastanza simpatico, anche se non un angelo totale. Mi piace semplicemente essere amichevole con le persone che incontro. Nel mio tempo libero, mi piace fare tutti i tipi di amici, avere conversazioni su qualsiasi cosa, guardare dipinti, usare il trucco, leggere, cantare (coro rappresentante!), fare gioielli, e mangiare cibo delizioso. Godetevi la giornata, state fuori dai guai. <3",
+        "likes": [10000, 50000, 88000, 11000, 11500, 120000, 15000] //7
+      },
+      {
+        "avatar": "avatars/others/arjen.png",
+        "username": "Arjen",
+        "text": "Il mio nome è Arjen, studio Intelligenza Artificiale. Inoltre mi piace usare il mio tempo libero per fare tutti i tipi di cose diverse... Sono anche un po' un nerd, immagino.",
+        "likes": [12000, 40000, 120000] //3
+      },
+      {
+        "avatar": "avatars/others/heather.png",
+        "username": "Heather",
+        "text": "In questo momento sto finendo il mio primo anno di un difficile curriculum scientifico all'università. Lavoro anche in un banco cosmetici come lavoro part-time e guadagno dei soldi online nel mio tempo libero. Ho molto pianificato per il mio futuro, ed è davvero emozionante. Voglio crescere ed essere un dottore con una famiglia di tanti piccoli cani. Sarà fantastico.",
+        "likes": [13000, 50000, 80000, 88000, 120000] //5
+      },
+      {
+        "avatar": "avatars/others/jane.png",
+        "username": "Jane",
+        "text": "Cari tutti, il mio nome è Jane e presto avrò un colloquio importante. È tutto quello a cui riesco a pensare in questi giorni. Spero che stiate bene",
+        "likes": [10000, 50000] //6
+      },
+
+    ]
+  };

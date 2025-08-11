@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<!-- 
+/*
+  
+Questo documento contiene tutte le istruzioni che appaiono nel paradigma, insieme a qualche funzionalità di base. 
+Puoi modificare tutto il testo seguendo le istruzioni qui sotto.
+
+Se non hai esperienza di programmazione, è importante che tu modifichi solo il testo semplice, come indicato nelle istruzioni, 
+e lasci intatti tutti gli elementi funzionali.
+*/ 
+--> 
+
+<head>
+<meta charset="utf-8">
+<title>Introduzione</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Fogli di stile -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.core.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.default.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+<!-- Supporto IE6-8 per elementi HTML5 -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Javascript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.3.0/mustache.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
+<script src="shortcut.js"></script>
+<script src="main.js"></script>
+<script type="text/javascript" src="profiles.json"></script>
+
+<!-- CSS per il loader -->
+<style>
+.css-loader {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4267B2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+
+</head>
+
+<body oncontextmenu="return false;">
+<div class="container">
+
+<div id="intro" style="display:none;" class="instr">
+ <!-- 
+/* 
+**Intro**
+---------
+Puoi modificare questo testo usando elementi HTML di base per la formattazione (ad esempio, <br>, <h3>).
+*/ 
+-->
+ <h3>Benvenuto/a in questo studio</h3>
+
+  Completerai una serie di semplici attività insieme ad altre persone,<br>
+  con le quali sarai connesso/a tramite internet. 
+  <br><br>
+  Per iniziare, tutti i partecipanti allo studio sceglieranno un "avatar" personale e<br>
+  scriveranno un breve testo per presentarsi.
+  <br><br>
+  Prima di iniziare i compiti, trascorrerai 3 minuti con le altre<br>
+  persone. Durante questo tempo, potrai leggere e reagire alle<br>
+  brevi presentazioni degli altri.
+  <br><br>
+  Seguiranno istruzioni specifiche.<br><br>
+  <b>Grazie!</b><br><br>
+  <button type="submit" id="submit_intro">Continua</button>
+</div>
+
+<div id="name" style="display:none;" class="instr">
+<!-- 
+/*
+**Username**
+---------
+Puoi modificare qui sotto il testo delle istruzioni per l'inserimento dei nomi utente.
+*/ 
+-->
+	<h3>Inserisci il tuo nome</h3>
+	Può essere il tuo nome, un soprannome o le iniziali<br><br>
+	
+	<input type="text" id="username" autocomplete="off" /><br><br>
+	<button type="submit" id="submit_username">Invia</button>
+</div>
+
+<div id="avatar" style="display:none;">	
+<!-- 
+/*
+**Scelta avatar**
+---------
+Puoi modificare il testo delle istruzioni. La frase "La tua scelta di avatar non sarà registrata o analizzata" 
+dipende dal fatto che la scelta dell'avatar venga o meno registrata.
+*/ 
+-->
+	<h3>Seleziona un avatar</h3>
+	Questo avatar ti rappresenterà durante il compito di gruppo, ma non sarà collegato alle tue risposte.<br>
+	La tua scelta di avatar non sarà registrata o analizzata.
+	<br><br>
+	<div class="avatars"></div>
+	<br><button type="submit" id="submit_avatar">Invia</button>
+	<br><br>
+</div>	
+
+<div id="text" style="display:none;" class="instr">	
+<!-- 
+/*
+**Inserimento descrizione**
+---------
+Puoi modificare il testo delle istruzioni.
+*/ 
+-->
+	<h3>Presentati</h3>
+	Scrivi un breve testo per presentarti al resto del gruppo.<br>
+	Scrivi qualcosa che vuoi condividere su di te.
+	<br><br>	
+	<textarea id="description" autocomplete="off"></textarea><br>
+	<span id="count">Caratteri rimanenti: 400</span><br><br>
+	<button type="submit" id="submit_text">Invia</button>
+</div>	
+
+<div id="fb_intro" style="display:none;" class="instr">
+<!-- 
+/*
+**Istruzioni del compito**
+---------
+Puoi modificare il testo delle istruzioni. Si raccomanda di includere l'invito a cercare di formarsi un'impressione sugli altri partecipanti
+in tutti i paradigmi di ostracismo. È inoltre consigliato definire l'azione del "mettere mi piace".
+Le informazioni sulla durata del compito possono essere adattate per corrispondere alla durata effettiva che hai impostato.
+*/ 
+-->
+  <h3>Introduzione di gruppo</h3>
+  Subito dopo la connessione, potrai vedere le descrizioni degli altri partecipanti.<br>
+  Puoi leggere e reagire alla breve presentazione che hanno scritto su di sé,<br>
+  facendo clic sul pulsante "Mi piace", simile a quello di Facebook ("preferito" su Twitter, <br>
+  &hearts; su Tumblr e Instagram, ecc.).<br>
+  <br>
+  Anche se l'interazione è minima, prova a formarti un'impressione delle persone del gruppo.<br>
+  Immagina come potrebbero apparire o suonare nella vita reale, che tipo di persone siano,<br>
+  e come potresti andare d'accordo con loro.
+  <br><br>
+  Il compito durerà 3 minuti ed è molto importante per lo studio, quindi ti preghiamo di prestare attenzione,<br>
+  senza cambiare pagina o svolgere altre attività. Potrebbero seguire domande sugli altri partecipanti.
+  <br><br>
+  <b>Se queste istruzioni sono chiare, puoi procedere all'accesso.</b><br>
+  <br>
+  <button type="submit" id="submit_fb_intro">Accedi</button>
+</div>
+
+<div id="fb_login" style="display:none;" class="instr">
+  <h3>Connessione in corso</h3>
+  Attendi mentre vieni collegato/a agli altri partecipanti del tuo gruppo.<br><br>
+  
+  <!-- Loader CSS invece del gif mancante -->
+  <div class="css-loader" id="loader">
+    <div class="spinner"></div>
+  </div>
+  
+  <div id="msg_all_done" style="display:none;">
+  <br>
+  	<b>Tutti i partecipanti sono ora connessi e puoi procedere.</b><br><br>
+  	<button type="submit" id="submit_fb_login">Continua</button>
+  </div>
+</div>
+
+<!-- 
+/*
+**Istruzioni durante il compito e timer**
+---------
+Puoi modificare il testo delle istruzioni.
+*/ 
+-->
+<div id="task" style="display:none;">
+	<div id="countdown">
+		<span class="secs" style="display: none;"></span>
+		Puoi fare clic su "Mi piace" se ti è piaciuta la descrizione di qualcuno<br><br>
+		tempo rimanente:<br>
+		<span id="timer" class="cntr label label-info"></span>
+		<br>
+		<button type="submit" id='final-continue' style="display:none;">Continua</button>	
+	</div>
+</div>
+
+<!-- TEMPLATE MODIFICATO: Post dell'utente corrente con struttura coerente -->
+<script type="template/text" id="usertmp">
+  {{#posts}}
+    <div class="entry user-entry" data-username="{{username}}" data-avatar="{{avatar}}">
+    <div class="tophalf">
+    	<img src="{{avatar}}" class="avatar" alt="Il tuo avatar">
+    	<h3 class="username">{{username}}</h3>
+    	<div class="main">
+    		<p class="description">{{text}}</p>
+    	</div>
+    	<br style="clear:both;">
+    </div>	
+    <div class="bottomhalf">
+    	Mi piace <span class="badge badge-custom userslikes" data-likes="{{likes}}" data-usernames="{{usernames}}">0</span>
+    </div>
+    </div>
+  {{/posts}}  
+</script>
+
+<!-- TEMPLATE MODIFICATO: Post degli altri utenti con struttura ottimizzata per tracking -->
+<script type="template/text" id="otherstmp">
+  {{#posts}}
+    <div class="entry other-entry" data-username="{{username}}" data-avatar="{{avatar}}">
+    <div class="tophalf">
+    	<img src="{{avatar}}" class="avatar" alt="Avatar di {{username}}">
+        <h3 class="username">{{username}}</h3>
+    	<div class="main">
+    		<p class="description">{{text}}</p>
+    	</div>
+    	<br style="clear:both;">
+    </div>	
+    <div class="bottomhalf">
+    	Mi piace <span class="badge badge-custom otherslikes" data-likes="{{likes}}">0</span>
+    	<button type="submit" class="btn pull-right btn-like btn-custom btn-deround" 
+                data-target-username="{{username}}" 
+                data-target-avatar="{{avatar}}">
+            Mi piace <i class="icon-thumbs-up icon-white"></i>
+        </button>
+    </div>
+    </div>
+  {{/posts}}  
+</script>
+
+</body>
+</html>

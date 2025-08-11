@@ -1,0 +1,43 @@
+# File temporanei
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Backup locali
+backup/local_*
+logs/debug_*
+
+# File editor
+.vscode/
+.idea/
+*.sublime-*
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+env/
+venv/
+.env
+
+# Sistema
+.fuse_hidden*
+.nfs*
+
+# Token e segreti (IMPORTANTE!)
+*.token
+.env.local
+secrets.txt
+config/secrets.*
