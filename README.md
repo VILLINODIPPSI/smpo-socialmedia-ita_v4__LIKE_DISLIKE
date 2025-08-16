@@ -449,9 +449,7 @@ p, c, u, av, d, total_likes, liked_usernames, liked_avatars,
 like_times, total_unlikes, unliked_usernames, unliked_avatars, unlike_times
 ```
 
-**Validazione manipulation check:**
-- Correlazione condizione assegnata ↔ percezione like ricevuti
-- Controllo funzionamento tecnico tramite parametri check
+
 
 ## 📚 Riferimenti
 
